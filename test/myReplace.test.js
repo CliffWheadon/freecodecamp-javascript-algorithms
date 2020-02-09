@@ -11,3 +11,10 @@ test('myReplace("He is Sleeping on the couch", "Sleeping", "sitting") ' +
     expect(myReplace("He is Sleeping on the couch", "Sleeping", "sitting"))
         .toBe("He is Sitting on the couch");
 });
+
+test('myReplace("This has a spellngi error", "spellngi", "spelling") should return ' +
+    '"This has a spelling error".', () => {
+
+    expect(myReplace("This has a spellingi error", "spellingi", "spelling"))
+        .toBe("This has a spelling error");
+});
