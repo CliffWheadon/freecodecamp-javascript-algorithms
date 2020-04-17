@@ -1,6 +1,6 @@
-# Intermediate Javascript Algorithms
+# Freecodecamp Javascript Algorithms
 
-Some of my implementations of the intermediate javascript algorithms on 
+Implementations of the javascript algorithms on 
 [freecodecamp](https://www.freecodecamp.org/learn).
 
 ## Install
