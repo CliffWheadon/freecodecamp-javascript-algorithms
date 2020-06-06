@@ -30,15 +30,31 @@ numeralToRoman.set(1000, 'M');
 numeralToRoman.set(2000, 'MM');
 numeralToRoman.set(3000, 'MMM');
 
-const convertToRoman = function(num) {
-  // get the leftmost digit
-  // get 10 * leftmost number
-  // num % above
-  // fetch from map
-  // add to output string
+const convertToRoman = function (num) {
+  const ones = num % 10;
+  const tens = num % 100 - ones;
+  const hundreds = num % 1000 - tens - ones;
+  const thousands = num % 10000 - hundreds - tens - ones;
 
+  let numberInRomanNumerals = '';
 
-  return num;
+  if (thousands > 0) {
+    numberInRomanNumerals += numeralToRoman.get(thousands);
+  }
+
+  if (hundreds > 0) {
+    numberInRomanNumerals += numeralToRoman.get(hundreds);
+  }
+
+  if (tens > 0) {
+    numberInRomanNumerals += numeralToRoman.get(tens);
+  }
+
+  if (ones > 0) {
+    numberInRomanNumerals += numeralToRoman.get(ones);
+  }
+
+  return numberInRomanNumerals;
 }
 
 module.exports = convertToRoman;
