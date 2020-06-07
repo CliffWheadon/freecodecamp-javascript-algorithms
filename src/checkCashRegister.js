@@ -10,7 +10,7 @@ const denominationValues = {
   "ONE HUNDRED": 10000
 }
 
-const checkCashRegister = function(price, cash, cid) {
+const checkCashRegister = function (price, cash, cid) {
   let changeDue = cash * 100 - price * 100;
   let change = [];
   const cashInDrawer = cid.reduce((accumulator, currentValue) => accumulator + currentValue[1] * 100, 0);
